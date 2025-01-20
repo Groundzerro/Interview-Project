@@ -1,0 +1,856 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "264c0660-7016-40e0-9487-50840ffcfdc7",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 40,
+      "y": 40
+    },
+    "ActionMetadata": {
+      "264c0660-7016-40e0-9487-50840ffcfdc7": {
+        "position": {
+          "x": 146.4,
+          "y": 96.8
+        }
+      },
+      "e1fa69b1-7e41-4f0a-91dd-d54b0fa3082c": {
+        "position": {
+          "x": 159.2,
+          "y": 276
+        }
+      },
+      "536ded18-7cc0-4669-89d4-6ff76b213292": {
+        "position": {
+          "x": 153.6,
+          "y": 456
+        },
+        "overrideConsoleVoice": false
+      },
+      "2c0f23c5-9c39-4dc5-8339-a9fb21ce15cf": {
+        "position": {
+          "x": 424.8,
+          "y": -59.2
+        },
+        "parameters": {
+          "HoursOfOperationId": {
+            "displayName": "IT Consulting & GRC HOOP"
+          }
+        },
+        "Hours": {
+          "id": "arn:aws:connect:us-east-1:491085418774:instance/4a995b7e-6357-448e-8215-36dfeefdb4ed/operating-hours/98ed00e2-cb11-4612-9f8d-1fcb559c699f",
+          "text": "IT Consulting & GRC HOOP"
+        }
+      },
+      "Main Greeting": {
+        "position": {
+          "x": 420,
+          "y": -273.6
+        },
+        "isFriendlyName": true
+      },
+      "f3eef7af-b669-49c5-bf24-ab5b34573d3f": {
+        "position": {
+          "x": 473.6,
+          "y": 944
+        }
+      },
+      "909c481a-11a5-48b1-b552-2f2a90af39a6": {
+        "position": {
+          "x": 457.6,
+          "y": 724.8
+        }
+      },
+      "76596a7c-ab3c-48df-a1e9-3a0cc61092a2": {
+        "position": {
+          "x": 473.6,
+          "y": 1332
+        }
+      },
+      "85952391-df1d-40b2-acad-e2068b14dee4": {
+        "position": {
+          "x": 191.2,
+          "y": 872.8
+        },
+        "parameters": {
+          "EventHooks": {
+            "AgentWhisper": {
+              "displayName": "IV-Agent-Whisper"
+            }
+          }
+        },
+        "contactFlow": {
+          "text": "IV-Agent-Whisper",
+          "id": "arn:aws:connect:us-east-1:491085418774:instance/4a995b7e-6357-448e-8215-36dfeefdb4ed/contact-flow/581dcb50-e440-4d0d-8dee-aa164d9f322b"
+        },
+        "customerOrAgent": false
+      },
+      "00c5f3e1-7611-4ddd-b79b-b6822ee4dc5a": {
+        "position": {
+          "x": -54.4,
+          "y": 870.4
+        },
+        "parameters": {
+          "EventHooks": {
+            "CustomerWhisper": {
+              "displayName": "IV-Customer-Whisper"
+            }
+          }
+        },
+        "contactFlow": {
+          "text": "IV-Customer-Whisper",
+          "id": "arn:aws:connect:us-east-1:491085418774:instance/4a995b7e-6357-448e-8215-36dfeefdb4ed/contact-flow/e7bd3216-8889-4e91-9d9d-229d482a9bd0"
+        },
+        "customerOrAgent": true
+      },
+      "c9dd17d3-9eda-4e6a-84b9-dbd79416bbec": {
+        "position": {
+          "x": 152.8,
+          "y": 629.6
+        },
+        "parameters": {
+          "EventHooks": {
+            "CustomerQueue": {
+              "displayName": "IV-Customer-Queue"
+            }
+          }
+        },
+        "contactFlow": {
+          "text": "IV-Customer-Queue",
+          "id": "arn:aws:connect:us-east-1:491085418774:instance/4a995b7e-6357-448e-8215-36dfeefdb4ed/contact-flow/ece2dd33-8b36-4a05-948e-4b3753cc3cff"
+        },
+        "customerOrAgent": true
+      },
+      "61e39864-b997-4936-9772-b1293edc34a9": {
+        "position": {
+          "x": -38.4,
+          "y": 1104
+        },
+        "parameters": {
+          "EventHooks": {
+            "AgentHold": {
+              "displayName": "IV-Agent-Hold"
+            }
+          }
+        },
+        "contactFlow": {
+          "text": "IV-Agent-Hold",
+          "id": "arn:aws:connect:us-east-1:491085418774:instance/4a995b7e-6357-448e-8215-36dfeefdb4ed/contact-flow/5451e5df-5d79-4720-b5e2-4f90472e405e"
+        },
+        "customerOrAgent": false
+      },
+      "c5bee230-3a33-465c-bf4d-7c69bcc44738": {
+        "position": {
+          "x": 204,
+          "y": 1076.8
+        },
+        "parameters": {
+          "EventHooks": {
+            "CustomerHold": {
+              "displayName": "IV-Customer-Hold"
+            }
+          }
+        },
+        "contactFlow": {
+          "text": "IV-Customer-Hold",
+          "id": "arn:aws:connect:us-east-1:491085418774:instance/4a995b7e-6357-448e-8215-36dfeefdb4ed/contact-flow/4ab90e86-db4e-4899-a6b2-b158e3223806"
+        },
+        "customerOrAgent": true
+      },
+      "Whisper-Hold Error": {
+        "position": {
+          "x": 470.4,
+          "y": 1103.2
+        },
+        "isFriendlyName": true
+      },
+      "336a0e4a-933c-4a40-9c1c-81dad1c771f3": {
+        "position": {
+          "x": 700,
+          "y": -288.8
+        }
+      },
+      "27f9c405-4aec-4a8e-a80a-b4796df13420": {
+        "position": {
+          "x": 696.8,
+          "y": -63.2
+        },
+        "parameters": {
+          "FlowModuleId": {
+            "displayName": "Error Handling"
+          }
+        },
+        "contactFlowModuleName": "Error Handling"
+      },
+      "c3e6d6ef-e276-4f77-b9eb-9fef0ef8d9e3": {
+        "position": {
+          "x": 965.6,
+          "y": -287.2
+        }
+      },
+      "1c5ea948-1365-43fc-98e8-8a36dc46afc4": {
+        "position": {
+          "x": 986.4,
+          "y": 224
+        },
+        "parameters": {
+          "QueueId": {
+            "displayName": "CybersecurityAndGRC Consulting"
+          }
+        },
+        "queue": {
+          "text": "CybersecurityAndGRC Consulting"
+        }
+      },
+      "22d979c7-14fa-443d-a7fa-bc6842589fd7": {
+        "position": {
+          "x": 976.8,
+          "y": 415.2
+        },
+        "parameters": {
+          "QueueId": {
+            "displayName": "Risk Assessment"
+          }
+        },
+        "queue": {
+          "text": "Risk Assessment"
+        }
+      },
+      "20ab8891-5049-4071-a34b-39adfa5f3ad6": {
+        "position": {
+          "x": 983.2,
+          "y": 607.2
+        },
+        "parameters": {
+          "QueueId": {
+            "displayName": "Security Awareness Training"
+          }
+        },
+        "queue": {
+          "text": "Security Awareness Training"
+        }
+      },
+      "aa0c47b7-e45a-4e26-ba06-3ad53b8c7161": {
+        "position": {
+          "x": 985.6,
+          "y": 831.2
+        },
+        "parameters": {
+          "QueueId": {
+            "displayName": "Staff Augmentation"
+          }
+        },
+        "queue": {
+          "text": "Staff Augmentation"
+        }
+      },
+      "Error Handling": {
+        "position": {
+          "x": 1381.6,
+          "y": 514.4
+        },
+        "isFriendlyName": true,
+        "parameters": {
+          "FlowModuleId": {
+            "displayName": "Error Handling"
+          }
+        },
+        "contactFlowModuleName": "Error Handling"
+      },
+      "6ff71d90-9d6d-4214-aa72-9079c94854a6": {
+        "position": {
+          "x": 432,
+          "y": 228
+        },
+        "conditionMetadata": [
+          {
+            "id": "f8133449-dc3f-4fa5-89f5-f84b82b19785",
+            "value": "1"
+          },
+          {
+            "id": "bfad5f81-c7c4-4ccb-8b82-2be8190f6f04",
+            "value": "2"
+          },
+          {
+            "id": "f83cd082-a09e-4c3d-8699-2d122aaba58a",
+            "value": "3"
+          },
+          {
+            "id": "1db635f3-0945-471c-b1f2-e7343bb739fa",
+            "value": "4"
+          },
+          {
+            "id": "7c25d125-fa09-494a-b087-a38e55f52030",
+            "value": "5"
+          },
+          {
+            "id": "90af2c50-e80e-4ab4-9d61-893852498da5",
+            "value": "0"
+          }
+        ]
+      },
+      "2dc6b75c-5194-4448-aa5e-29da2d323169": {
+        "position": {
+          "x": 1007.2,
+          "y": 1.6
+        },
+        "parameters": {
+          "QueueId": {
+            "displayName": "Compliance Assessment"
+          }
+        },
+        "queue": {
+          "text": "Compliance Assessment"
+        }
+      },
+      "3cdb9223-fe2e-46b9-8ab5-b1e5343569fa": {
+        "position": {
+          "x": 1364.8,
+          "y": 207.2
+        }
+      },
+      "00b56730-d77d-4b5c-8d88-7e42ed15db4f": {
+        "position": {
+          "x": 2016,
+          "y": 383.2
+        }
+      },
+      "8df0c3a6-9546-4a0e-b79c-72b559b2b881": {
+        "position": {
+          "x": 1674.4,
+          "y": 222.4
+        }
+      }
+    },
+    "Annotations": [],
+    "name": "IV-ITConsulting-GRC-InboundFlow",
+    "description": "",
+    "type": "contactFlow",
+    "status": "published",
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {
+        "FlowLoggingBehavior": "Enabled"
+      },
+      "Identifier": "264c0660-7016-40e0-9487-50840ffcfdc7",
+      "Type": "UpdateFlowLoggingBehavior",
+      "Transitions": {
+        "NextAction": "e1fa69b1-7e41-4f0a-91dd-d54b0fa3082c"
+      }
+    },
+    {
+      "Parameters": {
+        "RecordingBehavior": {
+          "RecordedParticipants": [
+            "Agent",
+            "Customer"
+          ],
+          "IVRRecordingBehavior": "Enabled"
+        },
+        "AnalyticsBehavior": {
+          "Enabled": "True",
+          "AnalyticsLanguage": "en-US",
+          "AnalyticsRedactionBehavior": "Disabled",
+          "AnalyticsRedactionResults": "RedactedAndOriginal",
+          "ChannelConfiguration": {
+            "Chat": {
+              "AnalyticsModes": []
+            },
+            "Voice": {
+              "AnalyticsModes": [
+                "RealTime"
+              ]
+            }
+          },
+          "SummaryConfiguration": {
+            "SummaryModes": [
+              "PostContact"
+            ]
+          }
+        }
+      },
+      "Identifier": "e1fa69b1-7e41-4f0a-91dd-d54b0fa3082c",
+      "Type": "UpdateContactRecordingBehavior",
+      "Transitions": {
+        "NextAction": "536ded18-7cc0-4669-89d4-6ff76b213292"
+      }
+    },
+    {
+      "Parameters": {
+        "TextToSpeechVoice": "Joanna"
+      },
+      "Identifier": "536ded18-7cc0-4669-89d4-6ff76b213292",
+      "Type": "UpdateContactTextToSpeechVoice",
+      "Transitions": {
+        "NextAction": "c9dd17d3-9eda-4e6a-84b9-dbd79416bbec"
+      }
+    },
+    {
+      "Parameters": {
+        "HoursOfOperationId": "arn:aws:connect:us-east-1:491085418774:instance/4a995b7e-6357-448e-8215-36dfeefdb4ed/operating-hours/98ed00e2-cb11-4612-9f8d-1fcb559c699f"
+      },
+      "Identifier": "2c0f23c5-9c39-4dc5-8339-a9fb21ce15cf",
+      "Type": "CheckHoursOfOperation",
+      "Transitions": {
+        "NextAction": "27f9c405-4aec-4a8e-a80a-b4796df13420",
+        "Conditions": [
+          {
+            "NextAction": "6ff71d90-9d6d-4214-aa72-9079c94854a6",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "True"
+              ]
+            }
+          },
+          {
+            "NextAction": "336a0e4a-933c-4a40-9c1c-81dad1c771f3",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "False"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "27f9c405-4aec-4a8e-a80a-b4796df13420",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "Thank you for calling IT Consulting and GRC."
+      },
+      "Identifier": "Main Greeting",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "2c0f23c5-9c39-4dc5-8339-a9fb21ce15cf",
+        "Errors": [
+          {
+            "NextAction": "27f9c405-4aec-4a8e-a80a-b4796df13420",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "f3eef7af-b669-49c5-bf24-ab5b34573d3f",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "LoopCount": "3"
+      },
+      "Identifier": "909c481a-11a5-48b1-b552-2f2a90af39a6",
+      "Type": "Loop",
+      "Transitions": {
+        "NextAction": "f3eef7af-b669-49c5-bf24-ab5b34573d3f",
+        "Conditions": [
+          {
+            "NextAction": "6ff71d90-9d6d-4214-aa72-9079c94854a6",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "ContinueLooping"
+              ]
+            }
+          },
+          {
+            "NextAction": "f3eef7af-b669-49c5-bf24-ab5b34573d3f",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "DoneLooping"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "76596a7c-ab3c-48df-a1e9-3a0cc61092a2",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "EventHooks": {
+          "AgentWhisper": "arn:aws:connect:us-east-1:491085418774:instance/4a995b7e-6357-448e-8215-36dfeefdb4ed/contact-flow/581dcb50-e440-4d0d-8dee-aa164d9f322b"
+        },
+        "EventHooksConfiguration": {
+          "AgentWhisper": {
+            "DisableExecution": "false"
+          }
+        }
+      },
+      "Identifier": "85952391-df1d-40b2-acad-e2068b14dee4",
+      "Type": "UpdateContactEventHooks",
+      "Transitions": {
+        "NextAction": "61e39864-b997-4936-9772-b1293edc34a9",
+        "Errors": [
+          {
+            "NextAction": "Whisper-Hold Error",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "EventHooks": {
+          "CustomerWhisper": "arn:aws:connect:us-east-1:491085418774:instance/4a995b7e-6357-448e-8215-36dfeefdb4ed/contact-flow/e7bd3216-8889-4e91-9d9d-229d482a9bd0"
+        },
+        "EventHooksConfiguration": {
+          "CustomerWhisper": {
+            "DisableExecution": "false"
+          }
+        }
+      },
+      "Identifier": "00c5f3e1-7611-4ddd-b79b-b6822ee4dc5a",
+      "Type": "UpdateContactEventHooks",
+      "Transitions": {
+        "NextAction": "85952391-df1d-40b2-acad-e2068b14dee4",
+        "Errors": [
+          {
+            "NextAction": "Whisper-Hold Error",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "EventHooks": {
+          "CustomerQueue": "arn:aws:connect:us-east-1:491085418774:instance/4a995b7e-6357-448e-8215-36dfeefdb4ed/contact-flow/ece2dd33-8b36-4a05-948e-4b3753cc3cff"
+        }
+      },
+      "Identifier": "c9dd17d3-9eda-4e6a-84b9-dbd79416bbec",
+      "Type": "UpdateContactEventHooks",
+      "Transitions": {
+        "NextAction": "00c5f3e1-7611-4ddd-b79b-b6822ee4dc5a",
+        "Errors": [
+          {
+            "NextAction": "Whisper-Hold Error",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "EventHooks": {
+          "AgentHold": "arn:aws:connect:us-east-1:491085418774:instance/4a995b7e-6357-448e-8215-36dfeefdb4ed/contact-flow/5451e5df-5d79-4720-b5e2-4f90472e405e"
+        }
+      },
+      "Identifier": "61e39864-b997-4936-9772-b1293edc34a9",
+      "Type": "UpdateContactEventHooks",
+      "Transitions": {
+        "NextAction": "c5bee230-3a33-465c-bf4d-7c69bcc44738",
+        "Errors": [
+          {
+            "NextAction": "Whisper-Hold Error",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "EventHooks": {
+          "CustomerHold": "arn:aws:connect:us-east-1:491085418774:instance/4a995b7e-6357-448e-8215-36dfeefdb4ed/contact-flow/4ab90e86-db4e-4899-a6b2-b158e3223806"
+        }
+      },
+      "Identifier": "c5bee230-3a33-465c-bf4d-7c69bcc44738",
+      "Type": "UpdateContactEventHooks",
+      "Transitions": {
+        "NextAction": "Main Greeting",
+        "Errors": [
+          {
+            "NextAction": "Whisper-Hold Error",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "We've encountered an error and your call will be disconnected. Please call back later "
+      },
+      "Identifier": "Whisper-Hold Error",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "76596a7c-ab3c-48df-a1e9-3a0cc61092a2",
+        "Errors": [
+          {
+            "NextAction": "76596a7c-ab3c-48df-a1e9-3a0cc61092a2",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "We are currently closed. Our office hours are Mondays through Friday, from 7 am to 5 pm central standard time. Please call back during normal business hours."
+      },
+      "Identifier": "336a0e4a-933c-4a40-9c1c-81dad1c771f3",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "c3e6d6ef-e276-4f77-b9eb-9fef0ef8d9e3",
+        "Errors": [
+          {
+            "NextAction": "27f9c405-4aec-4a8e-a80a-b4796df13420",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "FlowModuleId": "266a5c24-2b61-4c94-9e9a-496a81f4b8ad"
+      },
+      "Identifier": "27f9c405-4aec-4a8e-a80a-b4796df13420",
+      "Type": "InvokeFlowModule",
+      "Transitions": {
+        "NextAction": "c3e6d6ef-e276-4f77-b9eb-9fef0ef8d9e3",
+        "Errors": [
+          {
+            "NextAction": "c3e6d6ef-e276-4f77-b9eb-9fef0ef8d9e3",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "c3e6d6ef-e276-4f77-b9eb-9fef0ef8d9e3",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "QueueId": "arn:aws:connect:us-east-1:491085418774:instance/4a995b7e-6357-448e-8215-36dfeefdb4ed/queue/9f843326-2080-4500-b28c-4fde9c21b377"
+      },
+      "Identifier": "1c5ea948-1365-43fc-98e8-8a36dc46afc4",
+      "Type": "UpdateContactTargetQueue",
+      "Transitions": {
+        "NextAction": "3cdb9223-fe2e-46b9-8ab5-b1e5343569fa",
+        "Errors": [
+          {
+            "NextAction": "Error Handling",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "QueueId": "arn:aws:connect:us-east-1:491085418774:instance/4a995b7e-6357-448e-8215-36dfeefdb4ed/queue/32bc23a8-f2ab-4661-a22f-27639ce1ab6e"
+      },
+      "Identifier": "22d979c7-14fa-443d-a7fa-bc6842589fd7",
+      "Type": "UpdateContactTargetQueue",
+      "Transitions": {
+        "NextAction": "3cdb9223-fe2e-46b9-8ab5-b1e5343569fa",
+        "Errors": [
+          {
+            "NextAction": "Error Handling",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "QueueId": "arn:aws:connect:us-east-1:491085418774:instance/4a995b7e-6357-448e-8215-36dfeefdb4ed/queue/7975b55c-d706-4605-8460-32d607f23390"
+      },
+      "Identifier": "20ab8891-5049-4071-a34b-39adfa5f3ad6",
+      "Type": "UpdateContactTargetQueue",
+      "Transitions": {
+        "NextAction": "3cdb9223-fe2e-46b9-8ab5-b1e5343569fa",
+        "Errors": [
+          {
+            "NextAction": "Error Handling",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "QueueId": "arn:aws:connect:us-east-1:491085418774:instance/4a995b7e-6357-448e-8215-36dfeefdb4ed/queue/fc8903a3-e08c-4097-bf00-d8625aa31542"
+      },
+      "Identifier": "aa0c47b7-e45a-4e26-ba06-3ad53b8c7161",
+      "Type": "UpdateContactTargetQueue",
+      "Transitions": {
+        "NextAction": "3cdb9223-fe2e-46b9-8ab5-b1e5343569fa",
+        "Errors": [
+          {
+            "NextAction": "Error Handling",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "FlowModuleId": "266a5c24-2b61-4c94-9e9a-496a81f4b8ad"
+      },
+      "Identifier": "Error Handling",
+      "Type": "InvokeFlowModule",
+      "Transitions": {
+        "NextAction": "00b56730-d77d-4b5c-8d88-7e42ed15db4f",
+        "Errors": [
+          {
+            "NextAction": "00b56730-d77d-4b5c-8d88-7e42ed15db4f",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "StoreInput": "False",
+        "InputTimeLimitSeconds": "5",
+        "Text": "Press 1 for Compliance and Assessment.\nPress 2 for Cybersecurity and GRC Consulting.\nPress 3 for Risk Assessment.\nPress 4 for Security Awareness Training.\nPress 5 for Staff Augmentation.\nOr press 0 if you would like me to repeat these options."
+      },
+      "Identifier": "6ff71d90-9d6d-4214-aa72-9079c94854a6",
+      "Type": "GetParticipantInput",
+      "Transitions": {
+        "NextAction": "909c481a-11a5-48b1-b552-2f2a90af39a6",
+        "Conditions": [
+          {
+            "NextAction": "2dc6b75c-5194-4448-aa5e-29da2d323169",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "1"
+              ]
+            }
+          },
+          {
+            "NextAction": "1c5ea948-1365-43fc-98e8-8a36dc46afc4",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "2"
+              ]
+            }
+          },
+          {
+            "NextAction": "22d979c7-14fa-443d-a7fa-bc6842589fd7",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "3"
+              ]
+            }
+          },
+          {
+            "NextAction": "20ab8891-5049-4071-a34b-39adfa5f3ad6",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "4"
+              ]
+            }
+          },
+          {
+            "NextAction": "aa0c47b7-e45a-4e26-ba06-3ad53b8c7161",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "5"
+              ]
+            }
+          },
+          {
+            "NextAction": "909c481a-11a5-48b1-b552-2f2a90af39a6",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "0"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "909c481a-11a5-48b1-b552-2f2a90af39a6",
+            "ErrorType": "InputTimeLimitExceeded"
+          },
+          {
+            "NextAction": "909c481a-11a5-48b1-b552-2f2a90af39a6",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "27f9c405-4aec-4a8e-a80a-b4796df13420",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "QueueId": "arn:aws:connect:us-east-1:491085418774:instance/4a995b7e-6357-448e-8215-36dfeefdb4ed/queue/5ad6410d-e050-4452-9d64-578d30c765a1"
+      },
+      "Identifier": "2dc6b75c-5194-4448-aa5e-29da2d323169",
+      "Type": "UpdateContactTargetQueue",
+      "Transitions": {
+        "NextAction": "3cdb9223-fe2e-46b9-8ab5-b1e5343569fa",
+        "Errors": [
+          {
+            "NextAction": "Error Handling",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "3cdb9223-fe2e-46b9-8ab5-b1e5343569fa",
+      "Type": "TransferContactToQueue",
+      "Transitions": {
+        "NextAction": "8df0c3a6-9546-4a0e-b79c-72b559b2b881",
+        "Errors": [
+          {
+            "NextAction": "8df0c3a6-9546-4a0e-b79c-72b559b2b881",
+            "ErrorType": "QueueAtCapacity"
+          },
+          {
+            "NextAction": "8df0c3a6-9546-4a0e-b79c-72b559b2b881",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "00b56730-d77d-4b5c-8d88-7e42ed15db4f",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "Text": "All our agents are currently busy."
+      },
+      "Identifier": "8df0c3a6-9546-4a0e-b79c-72b559b2b881",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "00b56730-d77d-4b5c-8d88-7e42ed15db4f",
+        "Errors": [
+          {
+            "NextAction": "00b56730-d77d-4b5c-8d88-7e42ed15db4f",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "d9795da8-016e-43c2-82f8-96154cf10a7c",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 40,
+      "y": 40
+    },
+    "ActionMetadata": {
+      "a68c5755-49ec-4010-8fc6-39299bb197d0": {
+        "position": {
+          "x": 452,
+          "y": 430.4
+        }
+      },
+      "8125cf53-5214-4878-a4db-da6678f4a252": {
+        "position": {
+          "x": 495.2,
+          "y": 83.2
+        }
+      },
+      "e68e5bd3-1a2d-4114-91b4-5e7dbdd183e2": {
+        "position": {
+          "x": 162.4,
+          "y": 315.2
+        }
+      },
+      "d9795da8-016e-43c2-82f8-96154cf10a7c": {
+        "position": {
+          "x": 167.2,
+          "y": 89.6
+        }
+      }
+    },
+    "Annotations": [],
+    "name": "IV-Transfer-To-Sec-Awareness-Training-Agent",
+    "description": "",
+    "type": "agentTransfer",
+    "status": "PUBLISHED",
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {},
+      "Identifier": "a68c5755-49ec-4010-8fc6-39299bb197d0",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {},
+      "Identifier": "8125cf53-5214-4878-a4db-da6678f4a252",
+      "Type": "TransferContactToAgent",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "Text": "We are experiencing technical difficulties. Please hang up and call back."
+      },
+      "Identifier": "e68e5bd3-1a2d-4114-91b4-5e7dbdd183e2",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "a68c5755-49ec-4010-8fc6-39299bb197d0",
+        "Errors": [
+          {
+            "NextAction": "a68c5755-49ec-4010-8fc6-39299bb197d0",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "You have reached the Security Awareness Training team. An agent will be with you shortly."
+      },
+      "Identifier": "d9795da8-016e-43c2-82f8-96154cf10a7c",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "8125cf53-5214-4878-a4db-da6678f4a252",
+        "Errors": [
+          {
+            "NextAction": "e68e5bd3-1a2d-4114-91b4-5e7dbdd183e2",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    }
+  ]
+}

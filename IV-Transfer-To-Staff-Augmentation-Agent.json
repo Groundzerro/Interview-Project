@@ -1,0 +1,88 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "c64065ef-c51d-48c9-b6b8-cc281e1f17ec",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 40,
+      "y": 40
+    },
+    "ActionMetadata": {
+      "228fd6cb-dba4-405e-9df6-6173bb1ed108": {
+        "position": {
+          "x": 489.6,
+          "y": 80.8
+        }
+      },
+      "25c88fa0-197c-443a-9c85-f3037391ff5e": {
+        "position": {
+          "x": 446.4,
+          "y": 428
+        }
+      },
+      "c64065ef-c51d-48c9-b6b8-cc281e1f17ec": {
+        "position": {
+          "x": 161.6,
+          "y": 87.2
+        }
+      },
+      "bee6d15f-5464-4d92-a6c0-ef073a098999": {
+        "position": {
+          "x": 160.8,
+          "y": 305.6
+        }
+      }
+    },
+    "Annotations": [],
+    "name": "IV-Transfer-To-Staff-Augmentation-Agent",
+    "description": "",
+    "type": "agentTransfer",
+    "status": "PUBLISHED",
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {},
+      "Identifier": "228fd6cb-dba4-405e-9df6-6173bb1ed108",
+      "Type": "TransferContactToAgent",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {},
+      "Identifier": "25c88fa0-197c-443a-9c85-f3037391ff5e",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "Text": "You have reached the Staff Augmentation team. An agent will be with you shortly."
+      },
+      "Identifier": "c64065ef-c51d-48c9-b6b8-cc281e1f17ec",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "228fd6cb-dba4-405e-9df6-6173bb1ed108",
+        "Errors": [
+          {
+            "NextAction": "bee6d15f-5464-4d92-a6c0-ef073a098999",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "We are experiencing technical difficulties. Please hang up and call back."
+      },
+      "Identifier": "bee6d15f-5464-4d92-a6c0-ef073a098999",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "25c88fa0-197c-443a-9c85-f3037391ff5e",
+        "Errors": [
+          {
+            "NextAction": "25c88fa0-197c-443a-9c85-f3037391ff5e",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    }
+  ]
+}

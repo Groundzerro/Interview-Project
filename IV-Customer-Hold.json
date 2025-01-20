@@ -1,0 +1,32 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "7d3b0ee9-b446-41db-b385-835bebe880fe",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 40,
+      "y": 40
+    },
+    "ActionMetadata": {
+      "7d3b0ee9-b446-41db-b385-835bebe880fe": {
+        "position": {
+          "x": 144,
+          "y": 131.2
+        }
+      }
+    },
+    "Annotations": [],
+    "name": "IV-Customer-Hold",
+    "description": "",
+    "type": "customerHold",
+    "status": "PUBLISHED",
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {},
+      "Identifier": "7d3b0ee9-b446-41db-b385-835bebe880fe",
+      "Type": "EndFlowExecution",
+      "Transitions": {}
+    }
+  ]
+}

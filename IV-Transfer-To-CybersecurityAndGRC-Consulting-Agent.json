@@ -1,0 +1,88 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "19f1b90f-58b9-4e9e-a20f-b2d834395b93",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 40,
+      "y": 40
+    },
+    "ActionMetadata": {
+      "f5837a72-bff8-4044-ab8f-8fdcc7a10d65": {
+        "position": {
+          "x": 495.2,
+          "y": 83.2
+        }
+      },
+      "3c7f39c6-b038-402d-ae5f-7e917d043a97": {
+        "position": {
+          "x": 452,
+          "y": 430.4
+        }
+      },
+      "19f1b90f-58b9-4e9e-a20f-b2d834395b93": {
+        "position": {
+          "x": 167.2,
+          "y": 89.6
+        }
+      },
+      "d1dd3aaf-7cf7-41bf-a88b-9bf749f60038": {
+        "position": {
+          "x": 164.8,
+          "y": 307.2
+        }
+      }
+    },
+    "Annotations": [],
+    "name": "IV-Transfer-To-CybersecurityAndGRC-Consulting-Agent",
+    "description": "",
+    "type": "agentTransfer",
+    "status": "PUBLISHED",
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {},
+      "Identifier": "f5837a72-bff8-4044-ab8f-8fdcc7a10d65",
+      "Type": "TransferContactToAgent",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {},
+      "Identifier": "3c7f39c6-b038-402d-ae5f-7e917d043a97",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "Text": "You have reached the Cybersecurity and GRC Consulting team. An agent will be with you shortly."
+      },
+      "Identifier": "19f1b90f-58b9-4e9e-a20f-b2d834395b93",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "f5837a72-bff8-4044-ab8f-8fdcc7a10d65",
+        "Errors": [
+          {
+            "NextAction": "d1dd3aaf-7cf7-41bf-a88b-9bf749f60038",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "We are experiencing technical difficulties. Please hang up and call back."
+      },
+      "Identifier": "d1dd3aaf-7cf7-41bf-a88b-9bf749f60038",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "3c7f39c6-b038-402d-ae5f-7e917d043a97",
+        "Errors": [
+          {
+            "NextAction": "3c7f39c6-b038-402d-ae5f-7e917d043a97",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,804 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "784f7224-f742-4883-950b-ff96da38a220",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": -396.8,
+      "y": -280.8
+    },
+    "ActionMetadata": {
+      "20ca2259-2515-4409-a964-64c2e058a66a": {
+        "position": {
+          "x": -285.6,
+          "y": 202.4
+        }
+      },
+      "0d5fcd92-550e-4061-8395-a1299a519739": {
+        "position": {
+          "x": -286.4,
+          "y": 427.2
+        }
+      },
+      "2832f820-a4c3-4f11-bae3-a861bbdaf2ce": {
+        "position": {
+          "x": 226.4,
+          "y": 536
+        }
+      },
+      "784f7224-f742-4883-950b-ff96da38a220": {
+        "position": {
+          "x": -280.8,
+          "y": -137.6
+        },
+        "conditionMetadata": [
+          {
+            "id": "b966f5b9-78d6-40ff-82a3-fc9d6bb88002",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "IV-Compliance-Assessment"
+          },
+          {
+            "id": "bb02b7fd-3f14-4f88-b6fa-a7de249c4026",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "IV-CybersecurityAndGRC-Consulting"
+          },
+          {
+            "id": "e4e4fe9f-a55b-4eb0-9ec2-64dfaff6b6dd",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "IV-Risk-Assessment"
+          },
+          {
+            "id": "b1862558-007c-4eb5-b23d-8e6887f4f268",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "IV-Security-Awareness-Training"
+          },
+          {
+            "id": "d5e2bfec-4b95-4a4a-9a6c-2299a5fc3791",
+            "operator": {
+              "name": "Equals",
+              "value": "Equals",
+              "shortDisplay": "="
+            },
+            "value": "IV-Staff-Augmentation"
+          }
+        ]
+      },
+      "4408ccfa-e806-4482-a0ce-357d4774d028": {
+        "position": {
+          "x": 510.4,
+          "y": 226.4
+        }
+      },
+      "28ffbbbb-dce9-43dc-8162-76f8f899f00c": {
+        "position": {
+          "x": 510.4,
+          "y": 436.8
+        }
+      },
+      "c8c58d4f-0c17-4656-a67d-4ddfaf1a4f94": {
+        "position": {
+          "x": 508.8,
+          "y": -253.6
+        },
+        "conditionMetadata": [],
+        "countryCodePrefix": "+1"
+      },
+      "62000697-46d7-446d-a9c2-6606acd3b873": {
+        "position": {
+          "x": 1068,
+          "y": 144.8
+        }
+      },
+      "9437bb14-e4cc-4514-a14a-da8b72f281c5": {
+        "position": {
+          "x": 504.8,
+          "y": 8.8
+        }
+      },
+      "3e217403-e2bf-49e2-85b6-fb2412e4ff0a": {
+        "position": {
+          "x": 793.6,
+          "y": -255.2
+        },
+        "parameters": {
+          "Attributes": {
+            "customerInput": {
+              "useDynamic": true
+            }
+          }
+        },
+        "dynamicParams": [
+          "customerInput"
+        ]
+      },
+      "3b3a29dc-b0ae-4d54-85d3-7f3d39153b8a": {
+        "position": {
+          "x": 1041.6,
+          "y": -311.2
+        },
+        "conditionMetadata": [
+          {
+            "id": "a7ee79b7-f425-4e88-8984-51502819a25a",
+            "value": "1"
+          },
+          {
+            "id": "8f4f9406-f248-46b8-804f-a1746174800e",
+            "value": "2"
+          }
+        ]
+      },
+      "ea307eaa-b48e-4eb4-b17a-de9d5d04111c": {
+        "position": {
+          "x": 1332,
+          "y": 136
+        }
+      },
+      "f0747f8f-a904-4807-9cf3-96e1900976ae": {
+        "position": {
+          "x": 1277.6,
+          "y": -300.8
+        }
+      },
+      "72cab4f4-be28-4bce-8638-969336650fcd": {
+        "position": {
+          "x": 1338.4,
+          "y": 368.8
+        }
+      },
+      "b87e9969-ee41-4017-8333-7a507fef8bca": {
+        "position": {
+          "x": 1542.4,
+          "y": -283.2
+        }
+      },
+      "bd8fc203-5b13-4ac8-b085-e38e131d1e99": {
+        "position": {
+          "x": 1797.6,
+          "y": -275.2
+        }
+      },
+      "176ae680-073d-4202-a8e8-1969af59982a": {
+        "position": {
+          "x": 2077.6,
+          "y": -140.8
+        }
+      },
+      "69391446-9a62-4a45-a462-d579f4c6abc8": {
+        "position": {
+          "x": -56,
+          "y": -57.6
+        },
+        "dynamicParams": []
+      },
+      "590e2022-dd13-4f30-b52b-127b84eca73a": {
+        "position": {
+          "x": -56,
+          "y": 156
+        },
+        "dynamicParams": []
+      },
+      "bc230bd0-c831-43ac-9c6a-e3504cb092f9": {
+        "position": {
+          "x": -49.6,
+          "y": 362.4
+        },
+        "dynamicParams": []
+      },
+      "177f5d65-346e-447e-b178-62f18ed44b9f": {
+        "position": {
+          "x": -48.8,
+          "y": 555.2
+        },
+        "dynamicParams": []
+      },
+      "9b2ed4ae-c983-4a76-ae68-03581867411c": {
+        "position": {
+          "x": 223.2,
+          "y": 320
+        }
+      },
+      "b3234168-3d32-482d-9128-6dbb9aef2fa7": {
+        "position": {
+          "x": -48,
+          "y": 743.2
+        },
+        "dynamicParams": []
+      },
+      "a00b13ac-3cd9-40ad-b670-0cb96530d1c1": {
+        "position": {
+          "x": 227.2,
+          "y": 6.4
+        },
+        "conditionMetadata": [
+          {
+            "id": "ea2ad979-dca7-406c-b9ac-3529f842ceb4",
+            "value": "1"
+          }
+        ]
+      },
+      "30db7cb9-3475-4220-983e-f8b110880099": {
+        "position": {
+          "x": 177.6,
+          "y": -449.6
+        },
+        "parameters": {
+          "Messages": [
+            null,
+            {
+              "PromptId": {
+                "displayName": "Music_Jazz_MyTimetoFly_Inst.wav"
+              }
+            }
+          ],
+          "InterruptFrequencySeconds": {
+            "unit": 1
+          }
+        },
+        "audio": [
+          {
+            "id": "arn:aws:connect:us-east-1:491085418774:instance/4a995b7e-6357-448e-8215-36dfeefdb4ed/prompt/76fa4e84-90ca-4a3e-8a09-95caa9d42037",
+            "text": "Music_Jazz_MyTimetoFly_Inst.wav",
+            "type": "Prompt"
+          }
+        ],
+        "timeoutUnit": {
+          "value": "sec"
+        }
+      }
+    },
+    "Annotations": [],
+    "name": "IV-Customer-Queue",
+    "description": "",
+    "type": "customerQueue",
+    "status": "published",
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {
+        "Text": "System Error 1"
+      },
+      "Identifier": "20ca2259-2515-4409-a964-64c2e058a66a",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "0d5fcd92-550e-4061-8395-a1299a519739",
+        "Errors": [
+          {
+            "NextAction": "0d5fcd92-550e-4061-8395-a1299a519739",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "0d5fcd92-550e-4061-8395-a1299a519739",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {},
+      "Identifier": "2832f820-a4c3-4f11-bae3-a861bbdaf2ce",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "ComparisonValue": "$.Queue.Name"
+      },
+      "Identifier": "784f7224-f742-4883-950b-ff96da38a220",
+      "Type": "Compare",
+      "Transitions": {
+        "NextAction": "20ca2259-2515-4409-a964-64c2e058a66a",
+        "Conditions": [
+          {
+            "NextAction": "69391446-9a62-4a45-a462-d579f4c6abc8",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "IV-Compliance-Assessment"
+              ]
+            }
+          },
+          {
+            "NextAction": "590e2022-dd13-4f30-b52b-127b84eca73a",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "IV-CybersecurityAndGRC-Consulting"
+              ]
+            }
+          },
+          {
+            "NextAction": "bc230bd0-c831-43ac-9c6a-e3504cb092f9",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "IV-Risk-Assessment"
+              ]
+            }
+          },
+          {
+            "NextAction": "177f5d65-346e-447e-b178-62f18ed44b9f",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "IV-Security-Awareness-Training"
+              ]
+            }
+          },
+          {
+            "NextAction": "b3234168-3d32-482d-9128-6dbb9aef2fa7",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "IV-Staff-Augmentation"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "20ca2259-2515-4409-a964-64c2e058a66a",
+            "ErrorType": "NoMatchingCondition"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "LoopCount": "2"
+      },
+      "Identifier": "4408ccfa-e806-4482-a0ce-357d4774d028",
+      "Type": "Loop",
+      "Transitions": {
+        "NextAction": "28ffbbbb-dce9-43dc-8162-76f8f899f00c",
+        "Conditions": [
+          {
+            "NextAction": "c8c58d4f-0c17-4656-a67d-4ddfaf1a4f94",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "ContinueLooping"
+              ]
+            }
+          },
+          {
+            "NextAction": "28ffbbbb-dce9-43dc-8162-76f8f899f00c",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "DoneLooping"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "28ffbbbb-dce9-43dc-8162-76f8f899f00c",
+      "Type": "EndFlowExecution",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "StoreInput": "True",
+        "InputTimeLimitSeconds": "3",
+        "Text": "Please enter your 10 digit call back number.",
+        "InputValidation": {
+          "PhoneNumberValidation": {
+            "NumberFormat": "Local",
+            "CountryCode": "US"
+          }
+        }
+      },
+      "Identifier": "c8c58d4f-0c17-4656-a67d-4ddfaf1a4f94",
+      "Type": "GetParticipantInput",
+      "Transitions": {
+        "NextAction": "3e217403-e2bf-49e2-85b6-fb2412e4ff0a",
+        "Errors": [
+          {
+            "NextAction": "9437bb14-e4cc-4514-a14a-da8b72f281c5",
+            "ErrorType": "NoMatchingError"
+          },
+          {
+            "NextAction": "9437bb14-e4cc-4514-a14a-da8b72f281c5",
+            "ErrorType": "InvalidPhoneNumber"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "LoopCount": "2"
+      },
+      "Identifier": "62000697-46d7-446d-a9c2-6606acd3b873",
+      "Type": "Loop",
+      "Transitions": {
+        "NextAction": "28ffbbbb-dce9-43dc-8162-76f8f899f00c",
+        "Conditions": [
+          {
+            "NextAction": "c8c58d4f-0c17-4656-a67d-4ddfaf1a4f94",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "ContinueLooping"
+              ]
+            }
+          },
+          {
+            "NextAction": "28ffbbbb-dce9-43dc-8162-76f8f899f00c",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "DoneLooping"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "You either entered an invalid number, or we encountered an error while saving your number. Please try again."
+      },
+      "Identifier": "9437bb14-e4cc-4514-a14a-da8b72f281c5",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "4408ccfa-e806-4482-a0ce-357d4774d028",
+        "Errors": [
+          {
+            "NextAction": "28ffbbbb-dce9-43dc-8162-76f8f899f00c",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "customerInput": "$.StoredCustomerInput"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "3e217403-e2bf-49e2-85b6-fb2412e4ff0a",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "3b3a29dc-b0ae-4d54-85d3-7f3d39153b8a",
+        "Errors": [
+          {
+            "NextAction": "9437bb14-e4cc-4514-a14a-da8b72f281c5",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "StoreInput": "False",
+        "InputTimeLimitSeconds": "5",
+        "Text": "<speak>You entered.<prosody rate=\"slow\"><say-as interpret-as=\"telephone\">$.Attributes.customerInput</say-as></prosody>. if this is correct, press 1. or press 2 to try again.</speak>"
+      },
+      "Identifier": "3b3a29dc-b0ae-4d54-85d3-7f3d39153b8a",
+      "Type": "GetParticipantInput",
+      "Transitions": {
+        "NextAction": "62000697-46d7-446d-a9c2-6606acd3b873",
+        "Conditions": [
+          {
+            "NextAction": "f0747f8f-a904-4807-9cf3-96e1900976ae",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "1"
+              ]
+            }
+          },
+          {
+            "NextAction": "62000697-46d7-446d-a9c2-6606acd3b873",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "2"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "62000697-46d7-446d-a9c2-6606acd3b873",
+            "ErrorType": "InputTimeLimitExceeded"
+          },
+          {
+            "NextAction": "62000697-46d7-446d-a9c2-6606acd3b873",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "9437bb14-e4cc-4514-a14a-da8b72f281c5",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "The number you entered is not a valid number. \nAn agent will be with you shortly.\nThank you for your patience."
+      },
+      "Identifier": "ea307eaa-b48e-4eb4-b17a-de9d5d04111c",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "72cab4f4-be28-4bce-8638-969336650fcd",
+        "Errors": [
+          {
+            "NextAction": "72cab4f4-be28-4bce-8638-969336650fcd",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "CallbackNumber": "$.Attributes.customerInput"
+      },
+      "Identifier": "f0747f8f-a904-4807-9cf3-96e1900976ae",
+      "Type": "UpdateContactCallbackNumber",
+      "Transitions": {
+        "NextAction": "b87e9969-ee41-4017-8333-7a507fef8bca",
+        "Errors": [
+          {
+            "NextAction": "ea307eaa-b48e-4eb4-b17a-de9d5d04111c",
+            "ErrorType": "InvalidCallbackNumber"
+          },
+          {
+            "NextAction": "ea307eaa-b48e-4eb4-b17a-de9d5d04111c",
+            "ErrorType": "CallbackNumberNotDialable"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "72cab4f4-be28-4bce-8638-969336650fcd",
+      "Type": "EndFlowExecution",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "Text": "We will call you back as soon as an agent is available.\nGoodbye."
+      },
+      "Identifier": "b87e9969-ee41-4017-8333-7a507fef8bca",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "bd8fc203-5b13-4ac8-b085-e38e131d1e99",
+        "Errors": [
+          {
+            "NextAction": "72cab4f4-be28-4bce-8638-969336650fcd",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "RetryDelaySeconds": "60",
+        "InitialCallDelaySeconds": "99",
+        "MaximumConnectionAttempts": "2"
+      },
+      "Identifier": "bd8fc203-5b13-4ac8-b085-e38e131d1e99",
+      "Type": "CreateCallbackContact",
+      "Transitions": {
+        "NextAction": "176ae680-073d-4202-a8e8-1969af59982a",
+        "Errors": [
+          {
+            "NextAction": "176ae680-073d-4202-a8e8-1969af59982a",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "176ae680-073d-4202-a8e8-1969af59982a",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "selectedQueue": "IV-Compliance-Assessment"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "69391446-9a62-4a45-a462-d579f4c6abc8",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "30db7cb9-3475-4220-983e-f8b110880099",
+        "Errors": [
+          {
+            "NextAction": "9b2ed4ae-c983-4a76-ae68-03581867411c",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "selectedQueue": "IV-CybersecurityAndGRC-Consulting"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "590e2022-dd13-4f30-b52b-127b84eca73a",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "30db7cb9-3475-4220-983e-f8b110880099",
+        "Errors": [
+          {
+            "NextAction": "9b2ed4ae-c983-4a76-ae68-03581867411c",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "selectedQueue": "IV-Risk-Assessment"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "bc230bd0-c831-43ac-9c6a-e3504cb092f9",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "30db7cb9-3475-4220-983e-f8b110880099",
+        "Errors": [
+          {
+            "NextAction": "9b2ed4ae-c983-4a76-ae68-03581867411c",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "selectedQueue": "IV-Security-Awareness-Training"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "177f5d65-346e-447e-b178-62f18ed44b9f",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "30db7cb9-3475-4220-983e-f8b110880099",
+        "Errors": [
+          {
+            "NextAction": "9b2ed4ae-c983-4a76-ae68-03581867411c",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "We are having difficulties transferring your call.\nPlease call again later."
+      },
+      "Identifier": "9b2ed4ae-c983-4a76-ae68-03581867411c",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "2832f820-a4c3-4f11-bae3-a861bbdaf2ce",
+        "Errors": [
+          {
+            "NextAction": "2832f820-a4c3-4f11-bae3-a861bbdaf2ce",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "selectedQueue": "IV-Staff-Augmentation"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "b3234168-3d32-482d-9128-6dbb9aef2fa7",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "30db7cb9-3475-4220-983e-f8b110880099",
+        "Errors": [
+          {
+            "NextAction": "9b2ed4ae-c983-4a76-ae68-03581867411c",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "StoreInput": "False",
+        "InputTimeLimitSeconds": "3",
+        "Text": "Do you know you can opt-in for a callback.\nWe'll keep your place in line.\nPlease press one if you'll like us to call you back, \nOr stay on the line for the next available agent."
+      },
+      "Identifier": "a00b13ac-3cd9-40ad-b670-0cb96530d1c1",
+      "Type": "GetParticipantInput",
+      "Transitions": {
+        "NextAction": "28ffbbbb-dce9-43dc-8162-76f8f899f00c",
+        "Conditions": [
+          {
+            "NextAction": "c8c58d4f-0c17-4656-a67d-4ddfaf1a4f94",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "1"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "28ffbbbb-dce9-43dc-8162-76f8f899f00c",
+            "ErrorType": "InputTimeLimitExceeded"
+          },
+          {
+            "NextAction": "28ffbbbb-dce9-43dc-8162-76f8f899f00c",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "28ffbbbb-dce9-43dc-8162-76f8f899f00c",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Messages": [
+          {
+            "Text": "Thank you for your patience.\nYour call is very important to us.\nPlease stay on the line and an agent from  $.Attributes.selectedQueue, will be with you shortly."
+          },
+          {
+            "PromptId": "arn:aws:connect:us-east-1:491085418774:instance/4a995b7e-6357-448e-8215-36dfeefdb4ed/prompt/76fa4e84-90ca-4a3e-8a09-95caa9d42037"
+          }
+        ],
+        "InterruptFrequencySeconds": "10"
+      },
+      "Identifier": "30db7cb9-3475-4220-983e-f8b110880099",
+      "Type": "MessageParticipantIteratively",
+      "Transitions": {
+        "NextAction": "9b2ed4ae-c983-4a76-ae68-03581867411c",
+        "Conditions": [
+          {
+            "NextAction": "a00b13ac-3cd9-40ad-b670-0cb96530d1c1",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "MessagesInterrupted"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "9b2ed4ae-c983-4a76-ae68-03581867411c",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    }
+  ]
+}

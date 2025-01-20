@@ -1,0 +1,109 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "eaf185ab-0505-4b41-8c1b-7e314cbf17bc",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": -40,
+      "y": 1.6
+    },
+    "ActionMetadata": {
+      "eaf185ab-0505-4b41-8c1b-7e314cbf17bc": {
+        "position": {
+          "x": 80.8,
+          "y": 54.4
+        }
+      },
+      "d908ccb8-63e0-4441-b955-5e9f152e157a": {
+        "position": {
+          "x": 861.6,
+          "y": 368
+        }
+      },
+      "cc15d514-cecd-4b9c-b4e4-351e6fcf92f7": {
+        "position": {
+          "x": 326.4,
+          "y": 173.6
+        }
+      },
+      "c59d6ed6-bbf9-41c4-9833-78f4256b9a7e": {
+        "position": {
+          "x": 580.8,
+          "y": 264.8
+        }
+      }
+    },
+    "Annotations": [],
+    "name": "IV-Outbound",
+    "description": "",
+    "type": "contactFlow",
+    "status": "PUBLISHED",
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {
+        "FlowLoggingBehavior": "Enabled"
+      },
+      "Identifier": "eaf185ab-0505-4b41-8c1b-7e314cbf17bc",
+      "Type": "UpdateFlowLoggingBehavior",
+      "Transitions": {
+        "NextAction": "cc15d514-cecd-4b9c-b4e4-351e6fcf92f7"
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "d908ccb8-63e0-4441-b955-5e9f152e157a",
+      "Type": "EndFlowExecution",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "RecordingBehavior": {
+          "RecordedParticipants": [
+            "Agent",
+            "Customer"
+          ],
+          "IVRRecordingBehavior": "Enabled"
+        },
+        "AnalyticsBehavior": {
+          "Enabled": "True",
+          "AnalyticsLanguage": "en-US",
+          "AnalyticsRedactionBehavior": "Enabled",
+          "AnalyticsRedactionResults": "RedactedOnly",
+          "AnalyticsRedactionMaskMode": "PII",
+          "ChannelConfiguration": {
+            "Chat": {
+              "AnalyticsModes": []
+            },
+            "Voice": {
+              "AnalyticsModes": [
+                "RealTime"
+              ]
+            }
+          }
+        }
+      },
+      "Identifier": "cc15d514-cecd-4b9c-b4e4-351e6fcf92f7",
+      "Type": "UpdateContactRecordingBehavior",
+      "Transitions": {
+        "NextAction": "c59d6ed6-bbf9-41c4-9833-78f4256b9a7e"
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "This call will be recorded for training and compliance purposes. Any personal information collected will not be stored."
+      },
+      "Identifier": "c59d6ed6-bbf9-41c4-9833-78f4256b9a7e",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "d908ccb8-63e0-4441-b955-5e9f152e157a",
+        "Errors": [
+          {
+            "NextAction": "d908ccb8-63e0-4441-b955-5e9f152e157a",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    }
+  ]
+}

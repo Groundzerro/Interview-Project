@@ -1,0 +1,207 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "8e79a142-013c-4e39-a74d-d3a03a59bb6d",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": -210.4,
+      "y": -53.6
+    },
+    "ActionMetadata": {
+      "4837f4e3-133a-41ec-8490-e0118c24824c": {
+        "position": {
+          "x": 1052,
+          "y": 118.4
+        }
+      },
+      "6a8b9111-0997-4b43-9956-2edf47934957": {
+        "position": {
+          "x": 759.2,
+          "y": 4.8
+        }
+      },
+      "0799ce47-8d32-4c57-9e0e-cdabc4c496c7": {
+        "position": {
+          "x": 453.6,
+          "y": -23.2
+        }
+      },
+      "cada3430-f88d-4bef-ac42-9d9fd21d02c4": {
+        "position": {
+          "x": 190.4,
+          "y": 0
+        }
+      },
+      "7290e5a9-b3ab-4f73-a3fd-c145fec1a5ba": {
+        "position": {
+          "x": 494.4,
+          "y": 360.8
+        }
+      },
+      "8e79a142-013c-4e39-a74d-d3a03a59bb6d": {
+        "position": {
+          "x": -79.2,
+          "y": 6.4
+        },
+        "parameters": {
+          "HoursOfOperationId": {
+            "displayName": "IT Consulting & GRC HOOP"
+          }
+        },
+        "Hours": {
+          "id": "arn:aws:connect:us-east-1:491085418774:instance/4a995b7e-6357-448e-8215-36dfeefdb4ed/operating-hours/98ed00e2-cb11-4612-9f8d-1fcb559c699f",
+          "text": "IT Consulting & GRC HOOP"
+        }
+      },
+      "50b6a96e-e8c4-4cf9-a9da-b29f2fce8209": {
+        "position": {
+          "x": 206.4,
+          "y": 319.2
+        }
+      },
+      "a8a24d98-f3c8-4144-b0a1-fd72ef742811": {
+        "position": {
+          "x": -81.6,
+          "y": 276
+        }
+      }
+    },
+    "Annotations": [],
+    "name": "IV-Transfer-To-Queue",
+    "description": "",
+    "type": "queueTransfer",
+    "status": "PUBLISHED",
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {},
+      "Identifier": "4837f4e3-133a-41ec-8490-e0118c24824c",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "Text": "All our agents are now busy, please call back later."
+      },
+      "Identifier": "6a8b9111-0997-4b43-9956-2edf47934957",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "4837f4e3-133a-41ec-8490-e0118c24824c",
+        "Errors": [
+          {
+            "NextAction": "50b6a96e-e8c4-4cf9-a9da-b29f2fce8209",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "0799ce47-8d32-4c57-9e0e-cdabc4c496c7",
+      "Type": "TransferContactToQueue",
+      "Transitions": {
+        "NextAction": "50b6a96e-e8c4-4cf9-a9da-b29f2fce8209",
+        "Errors": [
+          {
+            "NextAction": "6a8b9111-0997-4b43-9956-2edf47934957",
+            "ErrorType": "QueueAtCapacity"
+          },
+          {
+            "NextAction": "50b6a96e-e8c4-4cf9-a9da-b29f2fce8209",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "An agent will be with you shortly"
+      },
+      "Identifier": "cada3430-f88d-4bef-ac42-9d9fd21d02c4",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "0799ce47-8d32-4c57-9e0e-cdabc4c496c7",
+        "Errors": [
+          {
+            "NextAction": "50b6a96e-e8c4-4cf9-a9da-b29f2fce8209",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "7290e5a9-b3ab-4f73-a3fd-c145fec1a5ba",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "HoursOfOperationId": "arn:aws:connect:us-east-1:491085418774:instance/4a995b7e-6357-448e-8215-36dfeefdb4ed/operating-hours/98ed00e2-cb11-4612-9f8d-1fcb559c699f"
+      },
+      "Identifier": "8e79a142-013c-4e39-a74d-d3a03a59bb6d",
+      "Type": "CheckHoursOfOperation",
+      "Transitions": {
+        "NextAction": "50b6a96e-e8c4-4cf9-a9da-b29f2fce8209",
+        "Conditions": [
+          {
+            "NextAction": "cada3430-f88d-4bef-ac42-9d9fd21d02c4",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "True"
+              ]
+            }
+          },
+          {
+            "NextAction": "a8a24d98-f3c8-4144-b0a1-fd72ef742811",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "False"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "50b6a96e-e8c4-4cf9-a9da-b29f2fce8209",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "Sorry, an error has occured and this call will be disconnected. Please try your call again later."
+      },
+      "Identifier": "50b6a96e-e8c4-4cf9-a9da-b29f2fce8209",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "7290e5a9-b3ab-4f73-a3fd-c145fec1a5ba",
+        "Errors": [
+          {
+            "NextAction": "7290e5a9-b3ab-4f73-a3fd-c145fec1a5ba",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "Sorry we are currently closed. \nPlease call back during regular business hours."
+      },
+      "Identifier": "a8a24d98-f3c8-4144-b0a1-fd72ef742811",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "7290e5a9-b3ab-4f73-a3fd-c145fec1a5ba",
+        "Errors": [
+          {
+            "NextAction": "50b6a96e-e8c4-4cf9-a9da-b29f2fce8209",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    }
+  ]
+}

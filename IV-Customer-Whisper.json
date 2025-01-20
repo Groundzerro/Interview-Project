@@ -1,0 +1,48 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "a56cb5d8-323d-41c1-a53e-f1924cf93103",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 40,
+      "y": 40
+    },
+    "ActionMetadata": {
+      "6d517f0c-a33c-4555-ac69-c310f79533e4": {
+        "position": {
+          "x": 435.2,
+          "y": 221.6
+        }
+      },
+      "a56cb5d8-323d-41c1-a53e-f1924cf93103": {
+        "position": {
+          "x": 164.8,
+          "y": 104
+        }
+      }
+    },
+    "Annotations": [],
+    "name": "IV-Customer-Whisper",
+    "description": "",
+    "type": "customerWhisper",
+    "status": "PUBLISHED",
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {},
+      "Identifier": "6d517f0c-a33c-4555-ac69-c310f79533e4",
+      "Type": "EndFlowExecution",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "Text": "Your call will be recorded for training and compliance purposes.\nYou are now being transferred to agent $.Agent.FirstName $.Agent.LastName."
+      },
+      "Identifier": "a56cb5d8-323d-41c1-a53e-f1924cf93103",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "6d517f0c-a33c-4555-ac69-c310f79533e4"
+      }
+    }
+  ]
+}

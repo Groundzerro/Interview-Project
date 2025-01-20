@@ -1,0 +1,408 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "fc77b097-6cd8-45b0-9516-766fce4a0a90",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 40,
+      "y": 40
+    },
+    "ActionMetadata": {
+      "ea7213ab-c4f8-4d49-8cdd-d8f9fc8d6872": {
+        "position": {
+          "x": 2025.6,
+          "y": 284
+        }
+      },
+      "2b006e87-32ce-407a-a806-4aed7a7e7f0b": {
+        "position": {
+          "x": 376.8,
+          "y": 783.2
+        }
+      },
+      "f9bfbd1e-1c88-4103-8f9a-e33e1c46f639": {
+        "position": {
+          "x": 876,
+          "y": 88
+        },
+        "conditionMetadata": [
+          {
+            "id": "37c1c69f-a86e-4aed-b2c8-f8c86928f98c",
+            "value": "1"
+          },
+          {
+            "id": "a704931e-3b23-4f95-a9d0-c097ed07f681",
+            "value": "2"
+          }
+        ]
+      },
+      "8c0559a9-f736-4b37-be6e-5fa4474489e9": {
+        "position": {
+          "x": 1156,
+          "y": 656.8
+        }
+      },
+      "d5c9d3cf-d122-4a3d-b224-1f0f38dea7da": {
+        "position": {
+          "x": 1155.2,
+          "y": 424
+        }
+      },
+      "dde369bb-d09f-4311-8ca1-9442370e8c6c": {
+        "position": {
+          "x": 1672.8,
+          "y": 101.6
+        }
+      },
+      "cda10e52-731e-4dcc-8f16-5d1a297622d8": {
+        "position": {
+          "x": 1129.6,
+          "y": 89.6
+        }
+      },
+      "1ca52848-ed91-44df-85a4-a1e970de3181": {
+        "position": {
+          "x": 1389.6,
+          "y": 93.6
+        }
+      },
+      "fc77b097-6cd8-45b0-9516-766fce4a0a90": {
+        "position": {
+          "x": 145.6,
+          "y": 93.6
+        }
+      },
+      "c44dfb5a-2c9f-4fc6-8273-e98c959c9965": {
+        "position": {
+          "x": 384.8,
+          "y": 566.4
+        }
+      },
+      "7c0c8dc8-624a-4dfb-bb30-254bdb2201f9": {
+        "position": {
+          "x": 373.6,
+          "y": 337.6
+        }
+      },
+      "33f76143-b4f7-4f7a-9bac-a1b1c81e5d35": {
+        "position": {
+          "x": 637.6,
+          "y": 96
+        },
+        "parameters": {
+          "Attributes": {
+            "customerInput": {
+              "useDynamic": true
+            }
+          }
+        },
+        "dynamicParams": [
+          "customerInput"
+        ]
+      },
+      "a716f247-6bac-459e-b70f-4d5c157b4ac4": {
+        "position": {
+          "x": 891.2,
+          "y": 432.8
+        }
+      },
+      "5a89b299-0818-45ba-85c9-0e08516ff367": {
+        "position": {
+          "x": 384,
+          "y": 88.8
+        },
+        "conditionMetadata": [],
+        "countryCodePrefix": "+1"
+      }
+    },
+    "Annotations": [],
+    "name": "IV-Callback-Module",
+    "description": "",
+    "status": "published",
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {},
+      "Identifier": "ea7213ab-c4f8-4d49-8cdd-d8f9fc8d6872",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {},
+      "Identifier": "2b006e87-32ce-407a-a806-4aed7a7e7f0b",
+      "Type": "EndFlowExecution",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "StoreInput": "False",
+        "InputTimeLimitSeconds": "5",
+        "Text": "<speak>You entered.<prosody rate=\"slow\"><say-as interpret-as=\"telephone\">$.Attributes.customerInput</say-as></prosody>. if this is correct, press 1. or press 2 to try again.</speak>"
+      },
+      "Identifier": "f9bfbd1e-1c88-4103-8f9a-e33e1c46f639",
+      "Type": "GetParticipantInput",
+      "Transitions": {
+        "NextAction": "a716f247-6bac-459e-b70f-4d5c157b4ac4",
+        "Conditions": [
+          {
+            "NextAction": "cda10e52-731e-4dcc-8f16-5d1a297622d8",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "1"
+              ]
+            }
+          },
+          {
+            "NextAction": "a716f247-6bac-459e-b70f-4d5c157b4ac4",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "2"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "a716f247-6bac-459e-b70f-4d5c157b4ac4",
+            "ErrorType": "InputTimeLimitExceeded"
+          },
+          {
+            "NextAction": "a716f247-6bac-459e-b70f-4d5c157b4ac4",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "7c0c8dc8-624a-4dfb-bb30-254bdb2201f9",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "8c0559a9-f736-4b37-be6e-5fa4474489e9",
+      "Type": "EndFlowExecution",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "Text": "The number you entered is not a valid number. \nAn agent will be with you shortly.\nThank you for your patience."
+      },
+      "Identifier": "d5c9d3cf-d122-4a3d-b224-1f0f38dea7da",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "8c0559a9-f736-4b37-be6e-5fa4474489e9",
+        "Errors": [
+          {
+            "NextAction": "8c0559a9-f736-4b37-be6e-5fa4474489e9",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "dde369bb-d09f-4311-8ca1-9442370e8c6c",
+      "Type": "TransferContactToQueue",
+      "Transitions": {
+        "NextAction": "ea7213ab-c4f8-4d49-8cdd-d8f9fc8d6872",
+        "Errors": [
+          {
+            "NextAction": "ea7213ab-c4f8-4d49-8cdd-d8f9fc8d6872",
+            "ErrorType": "QueueAtCapacity"
+          },
+          {
+            "NextAction": "ea7213ab-c4f8-4d49-8cdd-d8f9fc8d6872",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "CallbackNumber": "$.Attributes.customerInput"
+      },
+      "Identifier": "cda10e52-731e-4dcc-8f16-5d1a297622d8",
+      "Type": "UpdateContactCallbackNumber",
+      "Transitions": {
+        "NextAction": "1ca52848-ed91-44df-85a4-a1e970de3181",
+        "Errors": [
+          {
+            "NextAction": "d5c9d3cf-d122-4a3d-b224-1f0f38dea7da",
+            "ErrorType": "InvalidCallbackNumber"
+          },
+          {
+            "NextAction": "d5c9d3cf-d122-4a3d-b224-1f0f38dea7da",
+            "ErrorType": "CallbackNumberNotDialable"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "We will call you back as soon as an agent is available.\nGoodbye."
+      },
+      "Identifier": "1ca52848-ed91-44df-85a4-a1e970de3181",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "dde369bb-d09f-4311-8ca1-9442370e8c6c",
+        "Errors": [
+          {
+            "NextAction": "8c0559a9-f736-4b37-be6e-5fa4474489e9",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "FlowLoggingBehavior": "Enabled"
+      },
+      "Identifier": "fc77b097-6cd8-45b0-9516-766fce4a0a90",
+      "Type": "UpdateFlowLoggingBehavior",
+      "Transitions": {
+        "NextAction": "5a89b299-0818-45ba-85c9-0e08516ff367"
+      }
+    },
+    {
+      "Parameters": {
+        "LoopCount": "2"
+      },
+      "Identifier": "c44dfb5a-2c9f-4fc6-8273-e98c959c9965",
+      "Type": "Loop",
+      "Transitions": {
+        "NextAction": "2b006e87-32ce-407a-a806-4aed7a7e7f0b",
+        "Conditions": [
+          {
+            "NextAction": "5a89b299-0818-45ba-85c9-0e08516ff367",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "ContinueLooping"
+              ]
+            }
+          },
+          {
+            "NextAction": "2b006e87-32ce-407a-a806-4aed7a7e7f0b",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "DoneLooping"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "You either entered an invalid number, or we encountered an error while saving your number. Please try again."
+      },
+      "Identifier": "7c0c8dc8-624a-4dfb-bb30-254bdb2201f9",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "c44dfb5a-2c9f-4fc6-8273-e98c959c9965",
+        "Errors": [
+          {
+            "NextAction": "2b006e87-32ce-407a-a806-4aed7a7e7f0b",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Attributes": {
+          "customerInput": "$.StoredCustomerInput"
+        },
+        "TargetContact": "Current"
+      },
+      "Identifier": "33f76143-b4f7-4f7a-9bac-a1b1c81e5d35",
+      "Type": "UpdateContactAttributes",
+      "Transitions": {
+        "NextAction": "f9bfbd1e-1c88-4103-8f9a-e33e1c46f639",
+        "Errors": [
+          {
+            "NextAction": "7c0c8dc8-624a-4dfb-bb30-254bdb2201f9",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "LoopCount": "2"
+      },
+      "Identifier": "a716f247-6bac-459e-b70f-4d5c157b4ac4",
+      "Type": "Loop",
+      "Transitions": {
+        "NextAction": "2b006e87-32ce-407a-a806-4aed7a7e7f0b",
+        "Conditions": [
+          {
+            "NextAction": "5a89b299-0818-45ba-85c9-0e08516ff367",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "ContinueLooping"
+              ]
+            }
+          },
+          {
+            "NextAction": "2b006e87-32ce-407a-a806-4aed7a7e7f0b",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "DoneLooping"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "StoreInput": "True",
+        "InputTimeLimitSeconds": "3",
+        "Text": "Please enter your 10 digit call back number.",
+        "InputValidation": {
+          "PhoneNumberValidation": {
+            "NumberFormat": "Local",
+            "CountryCode": "US"
+          }
+        }
+      },
+      "Identifier": "5a89b299-0818-45ba-85c9-0e08516ff367",
+      "Type": "GetParticipantInput",
+      "Transitions": {
+        "NextAction": "33f76143-b4f7-4f7a-9bac-a1b1c81e5d35",
+        "Errors": [
+          {
+            "NextAction": "7c0c8dc8-624a-4dfb-bb30-254bdb2201f9",
+            "ErrorType": "NoMatchingError"
+          },
+          {
+            "NextAction": "7c0c8dc8-624a-4dfb-bb30-254bdb2201f9",
+            "ErrorType": "InvalidPhoneNumber"
+          }
+        ]
+      }
+    }
+  ],
+  "Settings": {
+    "InputParameters": [],
+    "OutputParameters": [],
+    "Transitions": [
+      {
+        "DisplayName": "Success",
+        "ReferenceName": "Success",
+        "Description": ""
+      },
+      {
+        "DisplayName": "Error",
+        "ReferenceName": "Error",
+        "Description": ""
+      }
+    ]
+  }
+}

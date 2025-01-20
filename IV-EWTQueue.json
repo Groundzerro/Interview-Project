@@ -1,0 +1,294 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "e2be4e50-b29f-4b1c-96cb-5770700a81dc",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 40,
+      "y": 40
+    },
+    "ActionMetadata": {
+      "12d75fb1-decc-4c8c-be72-744550a51dcb": {
+        "position": {
+          "x": 449.6,
+          "y": 17.6
+        }
+      },
+      "e2be4e50-b29f-4b1c-96cb-5770700a81dc": {
+        "position": {
+          "x": 134.4,
+          "y": 75.2
+        },
+        "parameters": {
+          "Messages": [
+            {
+              "PromptId": {
+                "displayName": "CustomerQueue.wav"
+              }
+            }
+          ],
+          "InterruptFrequencySeconds": {
+            "unit": 1
+          }
+        },
+        "audio": [
+          {
+            "id": "arn:aws:connect:us-east-1:491085418774:instance/4a995b7e-6357-448e-8215-36dfeefdb4ed/prompt/e2a980e6-3dfd-4843-bcf9-e49bd04ea67c",
+            "text": "CustomerQueue.wav",
+            "type": "Prompt"
+          }
+        ],
+        "timeoutUnit": {
+          "value": "sec"
+        }
+      },
+      "cd9ef545-2677-4de1-8248-52fdfd026ff3": {
+        "position": {
+          "x": 449.6,
+          "y": 220
+        }
+      },
+      "2a3f02ba-26c3-4227-95f8-e436371db46b": {
+        "position": {
+          "x": 1022.4,
+          "y": 249.6
+        }
+      },
+      "f7668158-cdee-4961-9dfa-af28997340a0": {
+        "position": {
+          "x": 760.8,
+          "y": 21.6
+        },
+        "parameters": {
+          "LambdaFunctionARN": {
+            "displayName": "IV-getEWT"
+          },
+          "LambdaInvocationAttributes": {
+            "queue_time": {
+              "useDynamic": true
+            }
+          }
+        },
+        "dynamicMetadata": {
+          "queue_time": true
+        }
+      },
+      "60a69290-f916-44cb-a31f-7823f3318d08": {
+        "position": {
+          "x": 1303.2,
+          "y": 480
+        }
+      },
+      "086ad57b-52d4-4ce2-b0f6-8a29e049841f": {
+        "position": {
+          "x": 1040.8,
+          "y": 12
+        }
+      },
+      "791d5728-9173-411a-a22f-b1d483abb1b0": {
+        "position": {
+          "x": 1676,
+          "y": 188
+        }
+      },
+      "6e7a425c-eed4-4838-bcaf-ccea4d207c79": {
+        "position": {
+          "x": 1340.8,
+          "y": -36.8
+        },
+        "conditionMetadata": [
+          {
+            "id": "9d783eee-4b1f-46ad-91c8-0765f9231fb4",
+            "value": "1"
+          },
+          {
+            "id": "e078302f-7272-4230-8a3f-c5cce414fa74",
+            "value": "2"
+          }
+        ]
+      }
+    },
+    "Annotations": [],
+    "name": "IV-EWTQueue",
+    "description": "",
+    "type": "customerQueue",
+    "status": "published",
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {},
+      "Identifier": "12d75fb1-decc-4c8c-be72-744550a51dcb",
+      "Type": "GetMetricData",
+      "Transitions": {
+        "NextAction": "f7668158-cdee-4961-9dfa-af28997340a0",
+        "Errors": [
+          {
+            "NextAction": "f7668158-cdee-4961-9dfa-af28997340a0",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Messages": [
+          {
+            "PromptId": "arn:aws:connect:us-east-1:491085418774:instance/4a995b7e-6357-448e-8215-36dfeefdb4ed/prompt/e2a980e6-3dfd-4843-bcf9-e49bd04ea67c"
+          }
+        ],
+        "InterruptFrequencySeconds": "5"
+      },
+      "Identifier": "e2be4e50-b29f-4b1c-96cb-5770700a81dc",
+      "Type": "MessageParticipantIteratively",
+      "Transitions": {
+        "NextAction": "cd9ef545-2677-4de1-8248-52fdfd026ff3",
+        "Conditions": [
+          {
+            "NextAction": "12d75fb1-decc-4c8c-be72-744550a51dcb",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "MessagesInterrupted"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "cd9ef545-2677-4de1-8248-52fdfd026ff3",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "The system encountered an error."
+      },
+      "Identifier": "cd9ef545-2677-4de1-8248-52fdfd026ff3",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "60a69290-f916-44cb-a31f-7823f3318d08",
+        "Errors": [
+          {
+            "NextAction": "60a69290-f916-44cb-a31f-7823f3318d08",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "The System encountered an Error in getting the Estimated Wait Time Lambda Function."
+      },
+      "Identifier": "2a3f02ba-26c3-4227-95f8-e436371db46b",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "60a69290-f916-44cb-a31f-7823f3318d08",
+        "Errors": [
+          {
+            "NextAction": "60a69290-f916-44cb-a31f-7823f3318d08",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "LambdaFunctionARN": "arn:aws:lambda:us-east-1:491085418774:function:IV-getEWT",
+        "InvocationTimeLimitSeconds": "3",
+        "LambdaInvocationAttributes": {
+          "queue_time": "$.Metrics.Queue.OldestContactAge"
+        },
+        "ResponseValidation": {
+          "ResponseType": "STRING_MAP"
+        }
+      },
+      "Identifier": "f7668158-cdee-4961-9dfa-af28997340a0",
+      "Type": "InvokeLambdaFunction",
+      "Transitions": {
+        "NextAction": "086ad57b-52d4-4ce2-b0f6-8a29e049841f",
+        "Errors": [
+          {
+            "NextAction": "2a3f02ba-26c3-4227-95f8-e436371db46b",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "60a69290-f916-44cb-a31f-7823f3318d08",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "Text": "Your estimated wait time is $.External.ewt seconds"
+      },
+      "Identifier": "086ad57b-52d4-4ce2-b0f6-8a29e049841f",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "6e7a425c-eed4-4838-bcaf-ccea4d207c79",
+        "Errors": [
+          {
+            "NextAction": "60a69290-f916-44cb-a31f-7823f3318d08",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {},
+      "Identifier": "791d5728-9173-411a-a22f-b1d483abb1b0",
+      "Type": "EndFlowExecution",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "StoreInput": "False",
+        "InputTimeLimitSeconds": "5",
+        "Text": "Press\n1 to wait for the next available agent\nor \n2 to request a callback"
+      },
+      "Identifier": "6e7a425c-eed4-4838-bcaf-ccea4d207c79",
+      "Type": "GetParticipantInput",
+      "Transitions": {
+        "NextAction": "791d5728-9173-411a-a22f-b1d483abb1b0",
+        "Conditions": [
+          {
+            "NextAction": "791d5728-9173-411a-a22f-b1d483abb1b0",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "1"
+              ]
+            }
+          },
+          {
+            "NextAction": "791d5728-9173-411a-a22f-b1d483abb1b0",
+            "Condition": {
+              "Operator": "Equals",
+              "Operands": [
+                "2"
+              ]
+            }
+          }
+        ],
+        "Errors": [
+          {
+            "NextAction": "791d5728-9173-411a-a22f-b1d483abb1b0",
+            "ErrorType": "InputTimeLimitExceeded"
+          },
+          {
+            "NextAction": "791d5728-9173-411a-a22f-b1d483abb1b0",
+            "ErrorType": "NoMatchingCondition"
+          },
+          {
+            "NextAction": "60a69290-f916-44cb-a31f-7823f3318d08",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "212e4a3b-f082-4f7d-948d-7433c204c255",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 40,
+      "y": 40
+    },
+    "ActionMetadata": {
+      "444a1dee-12f4-4756-adc3-bd30a4d1d128": {
+        "position": {
+          "x": 416.8,
+          "y": 200
+        }
+      },
+      "3c293237-daad-4845-b817-64de85e3543f": {
+        "position": {
+          "x": 417.6,
+          "y": 414.4
+        }
+      },
+      "212e4a3b-f082-4f7d-948d-7433c204c255": {
+        "position": {
+          "x": 132.8,
+          "y": 99.2
+        }
+      },
+      "944e9c23-8935-4850-b3ad-42e9dacd3b0c": {
+        "position": {
+          "x": 140,
+          "y": 304
+        }
+      }
+    },
+    "Annotations": [],
+    "name": "IV-Transfer-To-Compliance-Assessment-Agent",
+    "description": "",
+    "type": "agentTransfer",
+    "status": "PUBLISHED",
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {},
+      "Identifier": "444a1dee-12f4-4756-adc3-bd30a4d1d128",
+      "Type": "TransferContactToAgent",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {},
+      "Identifier": "3c293237-daad-4845-b817-64de85e3543f",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "Text": "You have reached the Compliance Assessment team.\nAn agent will be with you  shortly."
+      },
+      "Identifier": "212e4a3b-f082-4f7d-948d-7433c204c255",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "444a1dee-12f4-4756-adc3-bd30a4d1d128",
+        "Errors": [
+          {
+            "NextAction": "944e9c23-8935-4850-b3ad-42e9dacd3b0c",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "We are currently experiencing some technical difficulties.\nPlease call back later.\nThank you."
+      },
+      "Identifier": "944e9c23-8935-4850-b3ad-42e9dacd3b0c",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "3c293237-daad-4845-b817-64de85e3543f",
+        "Errors": [
+          {
+            "NextAction": "3c293237-daad-4845-b817-64de85e3543f",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    }
+  ]
+}

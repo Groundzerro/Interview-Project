@@ -1,0 +1,88 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "8950aaba-9f9f-4eca-b12a-f2421760ab37",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 40,
+      "y": 40
+    },
+    "ActionMetadata": {
+      "fea79043-0c1d-44ce-8db3-f5c5bac7df39": {
+        "position": {
+          "x": 452,
+          "y": 430.4
+        }
+      },
+      "19ada02b-b2b0-471c-9ee9-a0674226b055": {
+        "position": {
+          "x": 495.2,
+          "y": 83.2
+        }
+      },
+      "041703f6-c3b0-4f32-a062-870178e792cd": {
+        "position": {
+          "x": 168.8,
+          "y": 300
+        }
+      },
+      "8950aaba-9f9f-4eca-b12a-f2421760ab37": {
+        "position": {
+          "x": 167.2,
+          "y": 89.6
+        }
+      }
+    },
+    "Annotations": [],
+    "name": "IV-Transfer-To-Risk-Assessment-Agent",
+    "description": "",
+    "type": "agentTransfer",
+    "status": "PUBLISHED",
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {},
+      "Identifier": "fea79043-0c1d-44ce-8db3-f5c5bac7df39",
+      "Type": "DisconnectParticipant",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {},
+      "Identifier": "19ada02b-b2b0-471c-9ee9-a0674226b055",
+      "Type": "TransferContactToAgent",
+      "Transitions": {}
+    },
+    {
+      "Parameters": {
+        "Text": "We are experiencing technical difficulties. Please hang up and call back."
+      },
+      "Identifier": "041703f6-c3b0-4f32-a062-870178e792cd",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "fea79043-0c1d-44ce-8db3-f5c5bac7df39",
+        "Errors": [
+          {
+            "NextAction": "fea79043-0c1d-44ce-8db3-f5c5bac7df39",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    },
+    {
+      "Parameters": {
+        "Text": "You have reached the Risk Assessment team. An agent will be with you shortly."
+      },
+      "Identifier": "8950aaba-9f9f-4eca-b12a-f2421760ab37",
+      "Type": "MessageParticipant",
+      "Transitions": {
+        "NextAction": "19ada02b-b2b0-471c-9ee9-a0674226b055",
+        "Errors": [
+          {
+            "NextAction": "041703f6-c3b0-4f32-a062-870178e792cd",
+            "ErrorType": "NoMatchingError"
+          }
+        ]
+      }
+    }
+  ]
+}

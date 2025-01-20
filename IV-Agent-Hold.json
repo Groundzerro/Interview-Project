@@ -1,0 +1,57 @@
+{
+  "Version": "2019-10-30",
+  "StartAction": "59f65e31-6783-405d-b127-b5f34f54787e",
+  "Metadata": {
+    "entryPointPosition": {
+      "x": 40,
+      "y": 40
+    },
+    "ActionMetadata": {
+      "59f65e31-6783-405d-b127-b5f34f54787e": {
+        "position": {
+          "x": 136.8,
+          "y": 119.2
+        },
+        "parameters": {
+          "Messages": [
+            {
+              "PromptId": {
+                "displayName": "CustomerQueue.wav"
+              }
+            }
+          ]
+        },
+        "audio": [
+          {
+            "id": "arn:aws:connect:us-east-1:491085418774:instance/4a995b7e-6357-448e-8215-36dfeefdb4ed/prompt/e2a980e6-3dfd-4843-bcf9-e49bd04ea67c",
+            "text": "CustomerQueue.wav",
+            "type": "Prompt"
+          }
+        ]
+      }
+    },
+    "Annotations": [],
+    "name": "IV-Agent-Hold",
+    "description": "",
+    "type": "agentHold",
+    "status": "PUBLISHED",
+    "hash": {}
+  },
+  "Actions": [
+    {
+      "Parameters": {
+        "Messages": [
+          {
+            "PromptId": "arn:aws:connect:us-east-1:491085418774:instance/4a995b7e-6357-448e-8215-36dfeefdb4ed/prompt/e2a980e6-3dfd-4843-bcf9-e49bd04ea67c"
+          },
+          {
+            "Text": "You have a customer on the line."
+          }
+        ]
+      },
+      "Identifier": "59f65e31-6783-405d-b127-b5f34f54787e",
+      "Type": "MessageParticipantIteratively",
+      "Transitions": {}
+    }
+  ]
+}
